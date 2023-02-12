@@ -4,7 +4,7 @@ FROM centos:7
 LABEL description="This is our first Dockerfile"
 LABEL maintainer="Joseph Mbatchou"
 # update packages
-RUN yum -y updateD
+RUN yum -y update && yum clean all
 #install httpd
 RUN yum -y install httpd
 # copy index.html to the specify location in the container 
